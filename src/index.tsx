@@ -1,17 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { NextUIProvider } from '@nextui-org/react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement,
-);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: 'about',
+    element: <div>About</div>,
+  },
+]);
+
+const root = createRoot(document.getElementById('root') as HTMLElement);
+
 root.render(
   <React.StrictMode>
     <NextUIProvider>
-      <App />
+      <RouterProvider router={router} />
     </NextUIProvider>
   </React.StrictMode>,
 );
