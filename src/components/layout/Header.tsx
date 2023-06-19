@@ -1,48 +1,37 @@
 import React from 'react';
-import {
-  useTheme,
-  Navbar,
-  Button,
-  Link,
-  Text,
-  Switch,
-} from '@nextui-org/react';
+import { useLocation } from 'react-router-dom';
+import { Navbar, Link, Text, Switch } from '@nextui-org/react';
 import useDarkMode from 'use-dark-mode';
 import { SunIcon, MoonIcon } from '../common/icons';
 
 const Header = () => {
   const collapseItems = [
-    'Features',
-    'Customers',
-    'Pricing',
-    'Company',
-    'Legal',
-    'Team',
-    'Help & Feedback',
-    'Login',
-    'Sign Up',
+    { name: '診断テスト', path: '/' },
+    { name: '闇バイトとは', path: '/about' },
+    { name: 'お問い合わせ', path: '/contact' },
   ];
   const darkMode = useDarkMode(false);
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
     <Navbar shouldHideOnScroll isBordered variant="floating">
+      <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
       <Navbar.Brand>
-        <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
-        <Text b color="inherit" hideIn="xs">
-          ACME
+        <Text b color="inherit">
+          闇バイト診断テスト
         </Text>
       </Navbar.Brand>
-      <Navbar.Content
-        enableCursorHighlight
-        hideIn="xs"
-        variant="highlight-rounded"
-      >
-        <Navbar.Link href="#">Features</Navbar.Link>
-        <Navbar.Link isActive href="#">
-          Customers
+      <Navbar.Content hideIn="xs" variant="highlight-rounded">
+        <Navbar.Link href="/" isActive={currentPath === '/'}>
+          診断テスト
         </Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Company</Navbar.Link>
+        <Navbar.Link href="/about" isActive={currentPath === '/about'}>
+          闇バイトとは
+        </Navbar.Link>
+        <Navbar.Link href="/contact" isActive={currentPath === '/contact'}>
+          お問い合わせ
+        </Navbar.Link>
       </Navbar.Content>
       <Navbar.Content>
         <Switch
@@ -55,15 +44,15 @@ const Header = () => {
       </Navbar.Content>
       <Navbar.Collapse>
         {collapseItems.map((item, index) => (
-          <Navbar.CollapseItem key={item}>
+          <Navbar.CollapseItem key={item.name}>
             <Link
               color="inherit"
               css={{
                 minWidth: '100%',
               }}
-              href="#about"
+              href={item.path}
             >
-              {item}
+              {item.name}
             </Link>
           </Navbar.CollapseItem>
         ))}
