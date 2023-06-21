@@ -11,6 +11,7 @@ const darkTheme = createTheme({
       gradient:
         'linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)',
       link: '#5E1DAD',
+      background: '#1b1b1b',
     },
   },
 });
