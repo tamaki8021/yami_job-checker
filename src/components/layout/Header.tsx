@@ -18,9 +18,9 @@ const Header = () => {
     <Navbar shouldHideOnScroll isBordered variant="floating">
       <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
       <Navbar.Brand>
-        <Text b color="inherit">
-          闇バイト診断テスト
-        </Text>
+        <Link href="/" color="inherit">
+          <Text b>闇バイト診断テスト</Text>
+        </Link>
       </Navbar.Brand>
       <Navbar.Content
         hideIn="xs"
