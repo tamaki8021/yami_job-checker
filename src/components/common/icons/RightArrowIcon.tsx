@@ -1,13 +1,7 @@
 import React from 'react';
+import { IconProps } from './type';
 
-type Props = {
-  fill?: string;
-  size?: number;
-  height?: number;
-  width?: number;
-};
-
-const RightArrowIcon: React.FC<Props> = ({
+const RightArrowIcon: React.FC<IconProps> = ({
   fill = 'currentColor',
   size,
   height,

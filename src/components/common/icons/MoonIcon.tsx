@@ -1,22 +1,13 @@
 import React from 'react';
+import { IconProps } from './type';
 
-type Props = {
-  fill?: string;
-  filled?: boolean;
-  size?: string | number;
-  height?: string | number;
-  width?: string | number;
-  label?: string;
-};
-
-const MoonIcon = ({
+const MoonIcon: React.FC<IconProps> = ({
   fill = 'currentColor',
   filled,
   size,
   height,
   width,
-  label,
-}: Props) => {
+}) => {
   if (filled) {
     return (
       <svg
