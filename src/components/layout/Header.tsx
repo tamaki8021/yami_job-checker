@@ -18,11 +18,15 @@ const Header = () => {
     <Navbar shouldHideOnScroll isBordered variant="floating">
       <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
       <Navbar.Brand>
-        <Text b color="inherit">
-          闇バイト診断テスト
-        </Text>
+        <Link href="/" color="inherit">
+          <Text b>闇バイト診断テスト</Text>
+        </Link>
       </Navbar.Brand>
-      <Navbar.Content hideIn="xs" variant="highlight-rounded">
+      <Navbar.Content
+        hideIn="xs"
+        variant="highlight-rounded"
+        activeColor="secondary"
+      >
         <Navbar.Link href="/" isActive={currentPath === '/'}>
           診断テスト
         </Navbar.Link>
@@ -40,6 +44,7 @@ const Header = () => {
           size="xl"
           iconOn={<SunIcon filled />}
           iconOff={<MoonIcon filled />}
+          color="secondary"
         />
       </Navbar.Content>
       <Navbar.Collapse>
