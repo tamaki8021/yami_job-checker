@@ -22,7 +22,11 @@ const Header = () => {
           闇バイト診断テスト
         </Text>
       </Navbar.Brand>
-      <Navbar.Content hideIn="xs" variant="highlight-rounded">
+      <Navbar.Content
+        hideIn="xs"
+        variant="highlight-rounded"
+        activeColor="secondary"
+      >
         <Navbar.Link href="/" isActive={currentPath === '/'}>
           診断テスト
         </Navbar.Link>
@@ -40,6 +44,7 @@ const Header = () => {
           size="xl"
           iconOn={<SunIcon filled />}
           iconOff={<MoonIcon filled />}
+          color="secondary"
         />
       </Navbar.Content>
       <Navbar.Collapse>
