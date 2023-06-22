@@ -6,7 +6,6 @@ import {
   TwitterShareButton,
   FacebookIcon,
   TwitterIcon,
-  FacebookShareCount,
 } from 'react-share';
 import Layout from '../../components/layout';
 import backgroundimgDark from '../../assets/images/top-bg-img-dark.png';
