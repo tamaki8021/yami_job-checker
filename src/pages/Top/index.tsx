@@ -1,6 +1,12 @@
 import React from 'react';
-import { Text, Spacer, Button } from '@nextui-org/react';
+import { Text, Spacer, Button, Grid } from '@nextui-org/react';
 import useDarkMode from 'use-dark-mode';
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+} from 'react-share';
 import Layout from '../../components/layout';
 import backgroundimgDark from '../../assets/images/top-bg-img-dark.png';
 import backgroundimgLight from '../../assets/images/top-bg-img-light.png';
@@ -9,6 +15,15 @@ import { RightArrowIcon } from '../../components/common/icons';
 
 const TopPage = () => {
   const darkMode = useDarkMode(false);
+  const URL = 'https://example.com/';
+  const QUOTE = '【闇バイト診断サービス】自分の闇バイトリスクを診断しよう！';
+  const HASHTAGS = [
+    '闇バイト',
+    '診断サービス',
+    'キャリア選択',
+    'リスク回避',
+    '将来の選択',
+  ];
 
   return (
     <Layout>
@@ -89,6 +104,21 @@ const TopPage = () => {
         >
           テストを受ける
         </Button>
+        <Grid.Container gap={2} justify="center" alignItems="center">
+          <Grid>
+            <FacebookShareButton url={URL} quote={QUOTE}>
+              <FacebookIcon size={36} round />
+            </FacebookShareButton>
+          </Grid>
+          <Grid>
+            <TwitterShareButton url={URL} title={QUOTE} hashtags={HASHTAGS}>
+              <TwitterIcon size={36} round />
+            </TwitterShareButton>
+          </Grid>
+        </Grid.Container>
+      </Box>
+      <Box>
+        <Text>hoge</Text>
       </Box>
     </Layout>
   );
