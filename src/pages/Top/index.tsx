@@ -32,13 +32,15 @@ const TopPage = () => {
           backgroundImage: `url(${
             darkMode.value ? backgroundimgDark : backgroundimgLight
           })`,
-          minHeight: '100vh',
           backgroundPosition: 'center',
           backgroundTepeat: 'no-repeat',
           backgroundSize: 'cover',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          '@md': {
+            minHeight: '90vh',
+          },
         }}
       >
         <Box css={{ px: '$12', mt: '$8', maxW: '1450px' }}>
