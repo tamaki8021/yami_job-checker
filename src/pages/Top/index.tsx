@@ -117,8 +117,35 @@ const TopPage = () => {
           </Grid>
         </Grid.Container>
       </Box>
-      <Box>
-        <Text>hoge</Text>
+      <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
+        <Text
+          h2
+          size={25}
+          css={{
+            textGradient: '45deg, $blue600 -20%, $pink600 50%',
+            '@sm': {
+              fontSize: 30,
+            },
+            '@md': {
+              fontSize: 60,
+            },
+          }}
+          weight="bold"
+        >
+          闇バイト診断サービスとは？
+        </Text>
+        <Spacer y={2} />
+        <Text size="$lg" css={{ textAlign: 'start', '@sm': { px: '$20' } }}>
+          {/* eslint-disable max-len */}
+          闇バイト診断サービスは、あなたの性格や嗜好に基づいて、いくつかの質問に答えるだけで該当する闇バイトの種類を診断するユニークなサービスです。診断結果では、あなたの性格特性や志向性に基づいて、該当する闇バイトの種類や特徴が詳細に解説されます。
+          {/* eslint-enable max-len */}
+        </Text>
+        <Spacer y={1} />
+        <Text css={{ textAlign: 'start', '@sm': { px: '$20' } }}>
+          {/* eslint-disable max-len */}
+          このサービスの目標は、あなたが自分自身や将来のキャリアについてより良い選択をすることです。闇バイト診断サービスを通じて、あなたの安全と幸福をサポートするお手伝いをさせていただきます。
+          {/* eslint-enable max-len */}
+        </Text>
       </Box>
     </Layout>
   );
