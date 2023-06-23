@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Spacer, Button, Grid } from '@nextui-org/react';
+import { Text, Spacer, Button, Grid, Card } from '@nextui-org/react';
 import useDarkMode from 'use-dark-mode';
 import {
   FacebookShareButton,
@@ -10,6 +10,9 @@ import {
 import Layout from '../../components/layout';
 import backgroundimgDark from '../../assets/images/top-bg-img-dark.png';
 import backgroundimgLight from '../../assets/images/top-bg-img-light.png';
+import riskImg from '../../assets/images/risk_img.svg';
+import supportImg from '../../assets/images/support_img.svg';
+import understandingImg from '../../assets/images/understanding_img.svg';
 import Box from '../../components/common/Box';
 import { RightArrowIcon } from '../../components/common/icons';
 
@@ -148,6 +151,83 @@ const TopPage = () => {
           このサービスの目標は、あなたが自分自身や将来のキャリアについてより良い選択をすることです。闇バイト診断サービスを通じて、あなたの安全と幸福をサポートするお手伝いをさせていただきます。
           {/* eslint-enable max-len */}
         </Text>
+      </Box>
+      <Spacer y={3} />
+      <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
+        <Text h3>なぜ闇バイト診断サービスを利用するのか？</Text>
+        <Spacer y={2} />
+        <Grid.Container
+          gap={2}
+          justify="center"
+          alignItems="center"
+          direction="column"
+          css={{ '@xs': { flexDirection: 'row' } }}
+        >
+          <Grid xs>
+            <Card variant="bordered">
+              <Card.Header>
+                <Card.Image
+                  src={understandingImg}
+                  objectFit="cover"
+                  alt="Card image background"
+                  height={140}
+                />
+              </Card.Header>
+              <Card.Body>
+                <Text b size="$lg" css={{ textAlign: 'center' }}>
+                  自己理解を深める
+                </Text>
+                <Text size="sm">
+                  {/* eslint-disable max-len */}
+                  闇バイト診断サービスは、あなたの性格や適性を明らかにする手助けをします。自分自身をよりよく知ることで、自己理解を深め、適切な職業選択や将来のキャリアプランに役立てることができます。
+                  {/* eslint-enable max-len */}
+                </Text>
+              </Card.Body>
+            </Card>
+          </Grid>
+          <Grid xs>
+            <Card variant="bordered">
+              <Card.Header>
+                <Card.Image
+                  src={riskImg}
+                  objectFit="cover"
+                  alt="Card image background"
+                  height={140}
+                />
+              </Card.Header>
+              <Card.Body>
+                <Text b size="$lg" css={{ textAlign: 'center' }}>
+                  リスクを回避する
+                </Text>
+                <Text size="sm">
+                  {/* eslint-disable max-len */}
+                  闇バイトは合法的な労働環境とは異なり、身体的、精神的な健康に悪影響を及ぼす可能性があります。当サービスは、闇バイトのリスクを回避するための情報提供やアドバイスを提供します。
+                  {/* eslint-enable max-len */}
+                </Text>
+              </Card.Body>
+            </Card>
+          </Grid>
+          <Grid xs>
+            <Card variant="bordered">
+              <Card.Header>
+                <Card.Image
+                  src={supportImg}
+                  objectFit="cover"
+                  alt="Card image background"
+                  height={140}
+                />
+              </Card.Header>
+              <Card.Body>
+                <Text b size="$lg" css={{ textAlign: 'center' }}>
+                  選択をサポート
+                </Text>
+                <Text size="sm">
+                  闇バイト診断サービスは、あなたの性格や嗜好に基づいて、適切な職業や業界を提案します。これにより、将来の選択においてより的確な意思決定ができるようサポートします。
+                </Text>
+              </Card.Body>
+            </Card>
+          </Grid>
+        </Grid.Container>
       </Box>
     </Layout>
   );
