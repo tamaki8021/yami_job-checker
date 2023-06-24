@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Spacer, Button, Grid } from '@nextui-org/react';
+import { Text, Spacer, Button, Grid, Card } from '@nextui-org/react';
 import useDarkMode from 'use-dark-mode';
 import {
   FacebookShareButton,
@@ -10,6 +10,9 @@ import {
 import Layout from '../../components/layout';
 import backgroundimgDark from '../../assets/images/top-bg-img-dark.png';
 import backgroundimgLight from '../../assets/images/top-bg-img-light.png';
+import riskImg from '../../assets/images/risk_img.svg';
+import supportImg from '../../assets/images/support_img.svg';
+import understandingImg from '../../assets/images/understanding_img.svg';
 import Box from '../../components/common/Box';
 import { RightArrowIcon } from '../../components/common/icons';
 
@@ -32,13 +35,15 @@ const TopPage = () => {
           backgroundImage: `url(${
             darkMode.value ? backgroundimgDark : backgroundimgLight
           })`,
-          minHeight: '100vh',
           backgroundPosition: 'center',
           backgroundTepeat: 'no-repeat',
           backgroundSize: 'cover',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          '@md': {
+            minHeight: '90vh',
+          },
         }}
       >
         <Box css={{ px: '$12', mt: '$8', maxW: '1450px' }}>
@@ -117,8 +122,150 @@ const TopPage = () => {
           </Grid>
         </Grid.Container>
       </Box>
-      <Box>
-        <Text>hoge</Text>
+      <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
+        <Text
+          h2
+          css={{
+            textGradient: '45deg, $blue600 -20%, $pink600 50%',
+            '@sm': {
+              fontSize: 30,
+            },
+            '@md': {
+              fontSize: 40,
+            },
+          }}
+          weight="bold"
+        >
+          闇バイト診断サービスとは？
+        </Text>
+        <Spacer y={2} />
+        <Text size="$lg" css={{ textAlign: 'start', '@sm': { px: '$20' } }}>
+          {/* eslint-disable max-len */}
+          闇バイト診断サービスは、あなたの性格や嗜好に基づいて、いくつかの質問に答えるだけで該当する闇バイトの種類を診断するユニークなサービスです。診断結果では、あなたの性格特性や志向性に基づいて、該当する闇バイトの種類や特徴が詳細に解説されます。
+          {/* eslint-enable max-len */}
+        </Text>
+        <Spacer y={1} />
+        <Text css={{ textAlign: 'start', '@sm': { px: '$20' } }}>
+          {/* eslint-disable max-len */}
+          このサービスの目標は、あなたが自分自身や将来のキャリアについてより良い選択をすることです。闇バイト診断サービスを通じて、あなたの安全と幸福をサポートするお手伝いをさせていただきます。
+          {/* eslint-enable max-len */}
+        </Text>
+      </Box>
+      <Spacer y={3} />
+      <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
+        <Text
+          h3
+          css={{
+            textGradient: '45deg, $blue600 -20%, $pink600 50%',
+          }}
+        >
+          なぜ闇バイト診断サービスを利用するのか？
+        </Text>
+        <Spacer y={2} />
+        <Grid.Container
+          gap={2}
+          justify="center"
+          alignItems="center"
+          direction="column"
+          css={{ '@xs': { flexDirection: 'row' } }}
+        >
+          <Grid xs>
+            <Card variant="bordered">
+              <Card.Header>
+                <Card.Image
+                  src={understandingImg}
+                  objectFit="cover"
+                  alt="Card image background"
+                  height={140}
+                />
+              </Card.Header>
+              <Card.Body>
+                <Text b size="$lg" css={{ textAlign: 'center' }}>
+                  自己理解を深める
+                </Text>
+                <Text size="sm">
+                  闇バイト診断サービスは、あなたの性格や適性を明らかにする手助けをします。
+                  自分自身をよりよく知ることで、自己理解を深め、適切な職業選択や将来のキャリアプランに役立てることができます。
+                </Text>
+              </Card.Body>
+            </Card>
+          </Grid>
+          <Grid xs>
+            <Card variant="bordered">
+              <Card.Header>
+                <Card.Image
+                  src={riskImg}
+                  objectFit="cover"
+                  alt="Card image background"
+                  height={140}
+                />
+              </Card.Header>
+              <Card.Body>
+                <Text b size="$lg" css={{ textAlign: 'center' }}>
+                  リスクを回避する
+                </Text>
+                <Text size="sm">
+                  闇バイトは合法的な労働環境とは異なり、身体的、精神的な健康に悪影響を及ぼす可能性があります。
+                  当サービスは、闇バイトのリスクを回避するための情報提供やアドバイスを提供します。
+                </Text>
+              </Card.Body>
+            </Card>
+          </Grid>
+          <Grid xs>
+            <Card variant="bordered">
+              <Card.Header>
+                <Card.Image
+                  src={supportImg}
+                  objectFit="cover"
+                  alt="Card image background"
+                  height={140}
+                />
+              </Card.Header>
+              <Card.Body>
+                <Text b size="$lg" css={{ textAlign: 'center' }}>
+                  選択をサポート
+                </Text>
+                <Text size="sm">
+                  闇バイト診断サービスは、あなたの性格や嗜好に基づいて、適切な職業や業界を提案します。これにより、将来の選択においてより的確な意思決定ができるようサポートします。
+                </Text>
+              </Card.Body>
+            </Card>
+          </Grid>
+        </Grid.Container>
+      </Box>
+      <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
+        <Text
+          h3
+          css={{
+            textGradient: '45deg, $blue600 -20%, $pink600 50%',
+          }}
+          weight="bold"
+        >
+          今すぐ闇バイト診断サービスを利用しよう！
+        </Text>
+        <Text css={{ '@sm': { px: '$40' } }}>
+          あなた自身の闇バイトに対するリスクを知り、適切なキャリア選択をするために、ぜひ当サービスをご利用ください。
+          簡単な診断で、あなたの闇バイトの傾向や注意すべき点を明らかにします。安心して将来を見据えるための第一歩を踏み出しましょう。
+        </Text>
+        <Button
+          color="gradient"
+          size="xl"
+          auto
+          ghost
+          rounded
+          shadow
+          css={{ marginTop: '$10', margin: 'auto', my: '$10' }}
+          iconRight={<RightArrowIcon />}
+        >
+          テストを受ける
+        </Button>
+        <Spacer y={1} />
+        <Text size="$sm" css={{ textAlign: 'center', '@sm': { px: '$20' } }}>
+          もし質問や疑問がありましたら、お気軽にお問い合わせください。当サービスの専門チームがお手伝いいたします。
+        </Text>
+        <Text size="$sm" css={{ textAlign: 'center', '@sm': { px: '$20' } }}>
+          ※本サービスは闇バイトを奨励するものではありません。あくまでリスク回避や適切なキャリア選択のサポートを目的としています。
+        </Text>
       </Box>
     </Layout>
   );
