@@ -125,14 +125,13 @@ const TopPage = () => {
       <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
         <Text
           h2
-          size={25}
           css={{
             textGradient: '45deg, $blue600 -20%, $pink600 50%',
             '@sm': {
               fontSize: 30,
             },
             '@md': {
-              fontSize: 60,
+              fontSize: 40,
             },
           }}
           weight="bold"
@@ -154,7 +153,14 @@ const TopPage = () => {
       </Box>
       <Spacer y={3} />
       <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
-        <Text h3>なぜ闇バイト診断サービスを利用するのか？</Text>
+        <Text
+          h3
+          css={{
+            textGradient: '45deg, $blue600 -20%, $pink600 50%',
+          }}
+        >
+          なぜ闇バイト診断サービスを利用するのか？
+        </Text>
         <Spacer y={2} />
         <Grid.Container
           gap={2}
@@ -178,9 +184,8 @@ const TopPage = () => {
                   自己理解を深める
                 </Text>
                 <Text size="sm">
-                  {/* eslint-disable max-len */}
-                  闇バイト診断サービスは、あなたの性格や適性を明らかにする手助けをします。自分自身をよりよく知ることで、自己理解を深め、適切な職業選択や将来のキャリアプランに役立てることができます。
-                  {/* eslint-enable max-len */}
+                  闇バイト診断サービスは、あなたの性格や適性を明らかにする手助けをします。
+                  自分自身をよりよく知ることで、自己理解を深め、適切な職業選択や将来のキャリアプランに役立てることができます。
                 </Text>
               </Card.Body>
             </Card>
@@ -200,9 +205,8 @@ const TopPage = () => {
                   リスクを回避する
                 </Text>
                 <Text size="sm">
-                  {/* eslint-disable max-len */}
-                  闇バイトは合法的な労働環境とは異なり、身体的、精神的な健康に悪影響を及ぼす可能性があります。当サービスは、闇バイトのリスクを回避するための情報提供やアドバイスを提供します。
-                  {/* eslint-enable max-len */}
+                  闇バイトは合法的な労働環境とは異なり、身体的、精神的な健康に悪影響を及ぼす可能性があります。
+                  当サービスは、闇バイトのリスクを回避するための情報提供やアドバイスを提供します。
                 </Text>
               </Card.Body>
             </Card>
@@ -228,6 +232,40 @@ const TopPage = () => {
             </Card>
           </Grid>
         </Grid.Container>
+      </Box>
+      <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
+        <Text
+          h3
+          css={{
+            textGradient: '45deg, $blue600 -20%, $pink600 50%',
+          }}
+          weight="bold"
+        >
+          今すぐ闇バイト診断サービスを利用しよう！
+        </Text>
+        <Text css={{ '@sm': { px: '$40' } }}>
+          あなた自身の闇バイトに対するリスクを知り、適切なキャリア選択をするために、ぜひ当サービスをご利用ください。
+          簡単な診断で、あなたの闇バイトの傾向や注意すべき点を明らかにします。安心して将来を見据えるための第一歩を踏み出しましょう。
+        </Text>
+        <Button
+          color="gradient"
+          size="xl"
+          auto
+          ghost
+          rounded
+          shadow
+          css={{ marginTop: '$10', margin: 'auto', my: '$10' }}
+          iconRight={<RightArrowIcon />}
+        >
+          テストを受ける
+        </Button>
+        <Spacer y={1} />
+        <Text size="$sm" css={{ textAlign: 'center', '@sm': { px: '$20' } }}>
+          もし質問や疑問がありましたら、お気軽にお問い合わせください。当サービスの専門チームがお手伝いいたします。
+        </Text>
+        <Text size="$sm" css={{ textAlign: 'center', '@sm': { px: '$20' } }}>
+          ※本サービスは闇バイトを奨励するものではありません。あくまでリスク回避や適切なキャリア選択のサポートを目的としています。
+        </Text>
       </Box>
     </Layout>
   );
