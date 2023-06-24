@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import Box from '../common/Box';
 import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({ children }: { children: ReactNode }) => (
   <Box
@@ -10,6 +11,7 @@ const Layout = ({ children }: { children: ReactNode }) => (
   >
     <Header />
     {children}
+    <Footer />
   </Box>
 );
 
