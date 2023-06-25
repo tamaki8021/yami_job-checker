@@ -48,7 +48,8 @@
       { "namedComponents": ["arrow-function", "function-declaration"] }
     ],
     "react/require-default-props": "off",
-    "object-curly-newline": ["off"]
+    "object-curly-newline": ["off"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
   "settings": {
     "import/resolver": {
