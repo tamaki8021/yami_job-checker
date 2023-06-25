@@ -122,6 +122,7 @@ const TopPage = () => {
           </Grid>
         </Grid.Container>
       </Box>
+      <Spacer y={3} />
       <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
         <Text
           h2
@@ -233,6 +234,7 @@ const TopPage = () => {
           </Grid>
         </Grid.Container>
       </Box>
+      <Spacer y={3} />
       <Box css={{ px: '$12', mt: '$14', textAlign: 'center' }}>
         <Text
           h3
@@ -267,6 +269,7 @@ const TopPage = () => {
           ※本サービスは闇バイトを奨励するものではありません。あくまでリスク回避や適切なキャリア選択のサポートを目的としています。
         </Text>
       </Box>
+      <Spacer y={3} />
     </Layout>
   );
 };
