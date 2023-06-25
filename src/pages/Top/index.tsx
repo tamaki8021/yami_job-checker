@@ -56,7 +56,7 @@ const TopPage = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            height: '100vh',
+            height: '60vh',
           }}
           onClick={() => {
             setOpen((state) => !state);
@@ -76,7 +76,7 @@ const TopPage = () => {
               malesuada ac. Mauris lobortis, erat eu tristique facilisis, justo
               nulla luctus felis, vitae posuere velit eros vitae orci.
             </Text>
-            <Text size="$lg" hideIn="xs" css={{ mt: '$10' }}>
+            <Text size="$lg" css={{ mt: '$10' }}>
               Phasellus sed enim eget odio accumsan tristique. Mauris efficitur
               libero vel gravida cursus. Nullam vel fermentum lectus. Sed
               convallis tincidunt nisi, vel feugiat mi lacinia non. Fusce
@@ -86,7 +86,7 @@ const TopPage = () => {
               consectetur, scelerisque quam at, consectetur lectus. Pellentesque
               pellentesque velit sit amet finibus sollicitudin.
             </Text>
-            <Text size="$lg" hideIn="md" css={{ mt: '$10' }}>
+            <Text size="$lg" css={{ mt: '$10' }}>
               Donec posuere gravida risus, nec pharetra purus elementum ac.
               Suspendisse potenti. Mauris vestibulum, massa at bibendum
               bibendum, mi lorem eleifend lorem, id convallis diam elit eu dui.
@@ -97,7 +97,7 @@ const TopPage = () => {
               tincidunt justo non semper consectetur. Morbi fermentum magna ac
               risus suscipit, nec venenatis ligula bibendum.
             </Text>
-            <Text hideIn="md" css={{ mt: '$10' }}>
+            <Text css={{ mt: '$10' }}>
               Etiam ultricies ante vel posuere interdum. Nulla commodo, metus
               nec tristique lacinia, velit lacus blandit turpis, sed congue
               sapien purus vel neque. Sed nec volutpat est. In nec eros eget
