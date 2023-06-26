@@ -2,10 +2,13 @@ import React from 'react';
 import { Text, Spacer } from '@nextui-org/react';
 import Layout from '../../components/layout';
 import Box from '../../components/common/Box';
+import GooBlobs from '../../components/common/GooBlobs';
 
 const AboutPage = () => (
   <Layout>
-    <Box css={{ px: '$12', mt: '$14', textAlign: 'center', h: '100vh' }}>
+    <Box
+      css={{ px: '$12', mt: '$14', textAlign: 'center', '@sm': { h: '100vh' } }}
+    >
       <Text
         h2
         css={{
@@ -52,6 +55,7 @@ const AboutPage = () => (
         {/* eslint-enable max-len */}
       </Text>
     </Box>
+    <GooBlobs />
   </Layout>
 );
 
