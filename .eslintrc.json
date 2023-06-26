@@ -49,7 +49,8 @@
     ],
     "react/require-default-props": "off",
     "object-curly-newline": ["off"],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/prop-types": "off"
   },
   "settings": {
     "import/resolver": {
