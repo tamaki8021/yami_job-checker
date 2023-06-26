@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.13",
+    "@react-spring/web": "^9.7.2",
     "@supabase/supabase-js": "^2.26.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -16,6 +17,7 @@
     "react-router-dom": "^6.13.0",
     "react-scripts": "5.0.1",
     "react-share": "^4.4.1",
+    "react-use-measure": "^2.1.1",
     "typescript": "^4.9.5",
     "use-dark-mode": "^2.3.1",
     "web-vitals": "^2.1.4"

@@ -1,16 +1,22 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import App from '../App';
+import AboutPage from '../pages/About';
+import TopPage from '../pages/Top';
+import ContactPage from '../pages/Contact';
 
 const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <App />,
+      element: <TopPage />,
     },
     {
       path: 'about',
-      element: <div>About</div>,
+      element: <AboutPage />,
+    },
+    {
+      path: 'contact',
+      element: <ContactPage />,
     },
   ],
   { basename: process.env.PUBLIC_URL },
