@@ -13,12 +13,13 @@ const Header = () => {
   const darkMode = useDarkMode(false);
   const location = useLocation();
   const currentPath = location.pathname;
+  const publicUrl = process.env.PUBLIC_URL;
 
   return (
     <Navbar shouldHideOnScroll isBordered variant="floating">
       <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
       <Navbar.Brand>
-        <Link href="/" color="inherit">
+        <Link href={`${publicUrl}/`} color="inherit">
           <Text b>闇バイト診断テスト</Text>
         </Link>
       </Navbar.Brand>
@@ -27,13 +28,19 @@ const Header = () => {
         variant="highlight-rounded"
         activeColor="secondary"
       >
-        <Navbar.Link href="/" isActive={currentPath === '/'}>
+        <Navbar.Link href={`${publicUrl}/`} isActive={currentPath === '/'}>
           診断テスト
         </Navbar.Link>
-        <Navbar.Link href="/about" isActive={currentPath === '/about'}>
+        <Navbar.Link
+          href={`${publicUrl}/about`}
+          isActive={currentPath === '/about'}
+        >
           闇バイトとは
         </Navbar.Link>
-        <Navbar.Link href="/contact" isActive={currentPath === '/contact'}>
+        <Navbar.Link
+          href={`${publicUrl}/contact`}
+          isActive={currentPath === '/contact'}
+        >
           お問い合わせ
         </Navbar.Link>
       </Navbar.Content>
