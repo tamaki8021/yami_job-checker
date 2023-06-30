@@ -28,7 +28,10 @@ const Header = () => {
         variant="highlight-rounded"
         activeColor="secondary"
       >
-        <Navbar.Link href={`${publicUrl}/`} isActive={currentPath === '/'}>
+        <Navbar.Link
+          href={`${publicUrl}/question`}
+          isActive={currentPath === '/question'}
+        >
           診断テスト
         </Navbar.Link>
         <Navbar.Link
