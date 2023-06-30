@@ -29,6 +29,7 @@ const TopPage = () => {
     'リスク回避',
     '将来の選択',
   ];
+  const publicUrl = process.env.PUBLIC_URL;
 
   return (
     <Layout>
@@ -117,14 +118,16 @@ const TopPage = () => {
             </Trail>
           </Box>
           <Button
+            as="a"
             color="gradient"
             size="xl"
             auto
             ghost
             rounded
             shadow
-            css={{ marginTop: '$10' }}
+            css={{ mt: '$10' }}
             iconRight={<RightArrowIcon />}
+            href={`${publicUrl}/question`}
           >
             テストを受ける
           </Button>
@@ -268,15 +271,18 @@ const TopPage = () => {
             あなた自身の闇バイトに対するリスクを知り、適切なキャリア選択をするために、ぜひ当サービスをご利用ください。
             簡単な診断で、あなたの闇バイトの傾向や注意すべき点を明らかにします。安心して将来を見据えるための第一歩を踏み出しましょう。
           </Text>
+          <Spacer y={1} />
           <Button
+            as="a"
             color="gradient"
             size="xl"
             auto
             ghost
             rounded
             shadow
-            css={{ marginTop: '$10', margin: 'auto', my: '$10' }}
+            css={{ mt: '$10', maxW: '1450px', mx: 'auto' }}
             iconRight={<RightArrowIcon />}
+            href={`${publicUrl}/question`}
           >
             テストを受ける
           </Button>
