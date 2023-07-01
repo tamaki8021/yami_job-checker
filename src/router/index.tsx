@@ -4,6 +4,7 @@ import AboutPage from '../pages/About';
 import TopPage from '../pages/Top';
 import ContactPage from '../pages/Contact';
 import QuestionPage from '../pages/Question';
+import ResultPage from '../pages/Result';
 
 const router = createBrowserRouter(
   [
@@ -19,6 +20,10 @@ const router = createBrowserRouter(
     {
       path: 'contact',
       element: <ContactPage />,
+    },
+    {
+      path: 'result',
+      element: <ResultPage />,
     },
   ],
   { basename: process.env.PUBLIC_URL },
