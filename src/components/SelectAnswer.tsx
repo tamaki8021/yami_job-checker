@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Radio, Text } from '@nextui-org/react';
 import Box from './common/Box';
 
