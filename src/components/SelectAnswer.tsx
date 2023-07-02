@@ -4,11 +4,11 @@ import Box from './common/Box';
 
 type Props = {
   title: string;
+  value: string;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const SelectAnswer: React.FC<Props> = ({ title }) => {
-  const [selected, setSelected] = useState('3');
-
+const SelectAnswer: React.FC<Props> = ({ title, value, setValue }) => {
   return (
     <Box css={{ textAlign: 'center', w: '100%' }}>
       <Text size="$lg" weight="bold">
@@ -17,8 +17,8 @@ const SelectAnswer: React.FC<Props> = ({ title }) => {
 
       <Radio.Group
         orientation="horizontal"
-        value={selected}
-        onChange={setSelected}
+        value={value}
+        onChange={setValue}
         css={{ alignItems: 'center', mt: '$5' }}
       >
         <Radio value="1" color="secondary" size="xl" />
