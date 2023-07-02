@@ -1,4 +1,13 @@
 /* eslint-disable */
+import image1 from '../assets/images/1.jpg';
+import image2 from '../assets/images/2.jpg';
+import image3 from '../assets/images/3.jpg';
+import image4 from '../assets/images/4.png';
+import image5 from '../assets/images/5.png';
+import image6 from '../assets/images/6.jpg';
+import image7 from '../assets/images/7.jpg';
+import image8 from '../assets/images/8.jpg';
+
 // 質問とスコアの定義
 type Question = {
   title: string;
@@ -10,6 +19,7 @@ interface JobTypeInfo {
   description: string;
   reward: string;
   crime: string;
+  imagePath: string;
 }
 
 // 各闇バイトの種類に対する質問とスコアのマッピング
@@ -169,6 +179,7 @@ const jobTypesInfo: Array<JobTypeInfo> = [
       'メールが1通返ってきたら2円、投稿した写真画を見てもらえたら5円、写真付きのメールが来たら5円など。',
     crime:
       '詐欺罪（共犯）。詐欺罪の刑罰は重く、10年以下の懲役。また、被害者から損害賠償請求を受ける可能性もある。',
+    imagePath: image1,
   },
   {
     name: 'パチンコ・スロットの打ち子',
@@ -177,6 +188,7 @@ const jobTypesInfo: Array<JobTypeInfo> = [
     reward: '『軍資金+勝ち分の3分の1』',
     crime:
       '台の設定を知らされている場合は違法。業務上横領罪や窃盗の共謀共同正犯になると考えられる。窃盗であれば10人以下の懲役、または50万円以下の罰金、業務上横領であれば10年以下の懲役です。',
+    imagePath: image2,
   },
   {
     name: '口座レンタル（名義貸し）',
@@ -184,6 +196,7 @@ const jobTypesInfo: Array<JobTypeInfo> = [
     reward: '5万円',
     crime:
       '預金口座は「名義人本品の使用」が前提になっているので、第三者に貸すということは、金融機関を騙していることになるので詐欺罪に該当する。',
+    imagePath: image3,
   },
   {
     name: '出し子',
@@ -191,6 +204,7 @@ const jobTypesInfo: Array<JobTypeInfo> = [
       'オレオレ詐欺や架空請求詐欺で騙し取ったお金を、口座から引き出す仕事のこと。',
     reward: '引き出した金額の1割。引き出した金額が50万円なら5万円。',
     crime: '詐欺罪の共犯として罪に問われる。',
+    imagePath: image4,
   },
   {
     name: '受け子',
@@ -198,6 +212,7 @@ const jobTypesInfo: Array<JobTypeInfo> = [
       '詐欺事件で、お金を騙し取る相手から、現金を直接受け取ったり、宅配便などで送られてきた現金の入った荷物を受け取る役割をするアルバイト。',
     reward: '1回あたり5万円から10万円程度が相場。',
     crime: '詐欺罪の共犯として罪に問われる。',
+    imagePath: image5,
   },
   {
     name: '看板貼りバイト',
@@ -206,6 +221,7 @@ const jobTypesInfo: Array<JobTypeInfo> = [
     reward: '時給1800円。交通費等の手当はない。',
     crime:
       '私有地に侵入した場合は住居侵入罪に該当する可能性がある。立てた看板の状況によっては、器物破損罪が成立する恐れがある。住居侵入罪・器物破損罪ともに3年以下の懲役または10万円以下の罰金が課せられる。',
+    imagePath: image6,
   },
   {
     name: '運び屋',
@@ -214,12 +230,15 @@ const jobTypesInfo: Array<JobTypeInfo> = [
     reward: '報酬は情報に記載されていません。',
     crime:
       '麻薬取締法違反、国際的な麻薬取引の関与など。銃器取締法違反、銃器の違法所持や取引の関与など。',
+    imagePath: image7,
   },
   {
     name: '強盗・窃盗などの実行犯',
-    description: '',
-    reward: '',
+    description:
+      '実行する場所、施設の情報をテレグラムなどのツールを使って知り、当日に自分以外の知らない他人と協力して強盗、窃盗を行う仕事。',
+    reward: '報酬は情報に記載されていません。',
     crime: '強盗罪及び窃盗罪',
+    imagePath: image8,
   },
 ];
 
