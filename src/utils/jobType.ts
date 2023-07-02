@@ -217,8 +217,9 @@ const jobTypesInfo: Array<JobTypeInfo> = [
   },
   {
     name: '強盗・窃盗などの実行犯',
-    description: '',
-    reward: '',
+    description:
+      '実行する場所、施設の情報をテレグラムなどのツールを使って知り、当日に自分以外の知らない他人と協力して強盗、窃盗を行う仕事。',
+    reward: '報酬は情報に記載されていません。',
     crime: '強盗罪及び窃盗罪',
   },
 ];
