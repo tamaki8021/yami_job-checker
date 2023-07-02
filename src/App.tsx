@@ -4,13 +4,16 @@ import useDarkMode from 'use-dark-mode';
 import { RouterProvider } from 'react-router-dom';
 import { darkTheme, lightTheme } from './utils/theme';
 import router from './router';
+import { AnswerProvider } from './provider/AnswerProvider';
 
 const App = () => {
   const darkMode = useDarkMode(false);
 
   return (
     <NextUIProvider theme={darkMode.value ? darkTheme : lightTheme}>
-      <RouterProvider router={router} />
+      <AnswerProvider>
+        <RouterProvider router={router} />
+      </AnswerProvider>
     </NextUIProvider>
   );
 };

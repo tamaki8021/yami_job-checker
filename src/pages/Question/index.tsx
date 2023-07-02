@@ -1,20 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Grid, Spacer, Button } from '@nextui-org/react';
 import Layout from '../../components/layout';
 import SelectAnswer from '../../components/SelectAnswer';
+import { useAnswerContext } from '../../provider/AnswerProvider';
 
 const QuestionPage = () => {
   const publicUrl = process.env.PUBLIC_URL;
-  const [answer1, setAnswer1] = useState('3');
-  const [answer2, setAnswer2] = useState('3');
-  const [answer3, setAnswer3] = useState('3');
-  const [answer4, setAnswer4] = useState('3');
-  const [answer5, setAnswer5] = useState('3');
-  const [answer6, setAnswer6] = useState('3');
-  const [answer7, setAnswer7] = useState('3');
-  const [answer8, setAnswer8] = useState('3');
-  const [answer9, setAnswer9] = useState('3');
-  const [answer10, setAnswer10] = useState('3');
+  const {
+    answer1,
+    answer2,
+    answer3,
+    answer4,
+    answer5,
+    answer6,
+    answer7,
+    answer8,
+    answer9,
+    answer10,
+    setAnswer1,
+    setAnswer2,
+    setAnswer3,
+    setAnswer4,
+    setAnswer5,
+    setAnswer6,
+    setAnswer7,
+    setAnswer8,
+    setAnswer9,
+    setAnswer10,
+  } = useAnswerContext();
 
   return (
     <Layout>

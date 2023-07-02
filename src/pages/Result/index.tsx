@@ -3,9 +3,33 @@ import { Text, Spacer, Image } from '@nextui-org/react';
 import Layout from '../../components/layout';
 import Box from '../../components/common/Box';
 import { getMatchingJobTypes } from '../../utils/jobType';
+import { useAnswerContext } from '../../provider/AnswerProvider';
 
 const ResultPage = () => {
-  const userAnswers = [1, 5, 2, 3, 5, 3, 2, 4, 3, 5];
+  const {
+    answer1,
+    answer2,
+    answer3,
+    answer4,
+    answer5,
+    answer6,
+    answer7,
+    answer8,
+    answer9,
+    answer10,
+  } = useAnswerContext();
+  const userAnswers = [
+    Number(answer1),
+    Number(answer2),
+    Number(answer3),
+    Number(answer4),
+    Number(answer5),
+    Number(answer6),
+    Number(answer7),
+    Number(answer8),
+    Number(answer9),
+    Number(answer10),
+  ];
   const matchingJobType = getMatchingJobTypes(userAnswers);
 
   return (
