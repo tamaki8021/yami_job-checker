@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, Spacer } from '@nextui-org/react';
+import { Text, Spacer, Image } from '@nextui-org/react';
 import Layout from '../../components/layout';
 import Box from '../../components/common/Box';
-import { getMatchingJobTypes, jobTypesInfo } from '../../utils/jobType';
+import { getMatchingJobTypes } from '../../utils/jobType';
 
 const ResultPage = () => {
   const userAnswers = [1, 5, 2, 3, 5, 3, 2, 4, 3, 5];
@@ -28,36 +28,43 @@ const ResultPage = () => {
           {matchingJobType.name}
         </Text>
         <Spacer y={2} />
+        <Image
+          width={320}
+          src={matchingJobType.imagePath}
+          alt={matchingJobType.name}
+          objectFit="cover"
+        />
+        <Spacer y={2} />
         <Text
           size="$lg"
           weight="semibold"
-          css={{ textAlign: 'start', '@sm': { px: '$20' }, mb: '$3' }}
+          css={{ '@sm': { px: '$20' }, mb: '$3' }}
         >
           {`${matchingJobType.name}とは`}
         </Text>
-        <Text size="$lg" css={{ textAlign: 'start', '@sm': { px: '$20' } }}>
+        <Text size="$lg" css={{ '@sm': { px: '$20' } }}>
           {matchingJobType.description}
         </Text>
         <Spacer y={2} />
         <Text
           size="$lg"
           weight="semibold"
-          css={{ textAlign: 'start', '@sm': { px: '$20' }, mb: '$3' }}
+          css={{ '@sm': { px: '$20' }, mb: '$3' }}
         >
-          報酬は？
+          報酬
         </Text>
-        <Text size="$lg" css={{ textAlign: 'start', '@sm': { px: '$20' } }}>
+        <Text size="$lg" css={{ '@sm': { px: '$20' } }}>
           {matchingJobType.reward}
         </Text>
         <Spacer y={2} />
         <Text
           size="$lg"
           weight="semibold"
-          css={{ textAlign: 'start', '@sm': { px: '$20' }, mb: '$3' }}
+          css={{ '@sm': { px: '$20' }, mb: '$3' }}
         >
-          どのような罪に問われるの？
+          どのような罪に問われるのか
         </Text>
-        <Text size="$lg" css={{ textAlign: 'start', '@sm': { px: '$20' } }}>
+        <Text size="$lg" css={{ '@sm': { px: '$20' } }}>
           {matchingJobType.crime}
         </Text>
       </Box>
